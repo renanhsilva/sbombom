@@ -45,6 +45,7 @@ SUPPORTED_PATTERNS = [
 IMPLEMENTED = {
     "requirements.txt",
     "requirements-dev.txt",
+    "pyproject.toml",
     "package.json",
     "package-lock.json",
     "pom.xml",

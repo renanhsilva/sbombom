@@ -195,7 +195,7 @@ O detector reconhece estes arquivos dentro de repositorios:
 
 ## Parsers implementados no MVP
 
-- Python: `requirements.txt`, `requirements-dev.txt`, arquivos `*requirements*.txt`, arquivos `*constraints*.txt` e arquivos `.txt` dentro de diretorios `requirements/`
+- Python: `requirements.txt`, `requirements-dev.txt`, `pyproject.toml`, arquivos `*requirements*.txt`, arquivos `*constraints*.txt` e arquivos `.txt` dentro de diretorios `requirements/`
 - JavaScript/Node.js: `package.json`, `package-lock.json`
 - Java: `pom.xml`
 - .NET: `*.csproj`, `packages.config`

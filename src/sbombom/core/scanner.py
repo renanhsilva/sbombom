@@ -7,7 +7,7 @@ from sbombom.parsers.dotnet import parse_csproj, parse_packages_config
 from sbombom.parsers.golang import parse_go_mod
 from sbombom.parsers.java import parse_pom_xml
 from sbombom.parsers.javascript import parse_package_json, parse_package_lock_json
-from sbombom.parsers.python import parse_requirements
+from sbombom.parsers.python import parse_pyproject_toml, parse_requirements
 
 
 def _is_python_requirements_file(file_path: Path) -> bool:
@@ -27,6 +27,8 @@ def parse_file(file_path: Path) -> list[Dependency]:
     name = file_path.name
     if name in {"requirements.txt", "requirements-dev.txt"} or _is_python_requirements_file(file_path):
         return parse_requirements(file_path)
+    if name == "pyproject.toml":
+        return parse_pyproject_toml(file_path)
     if name == "package.json":
         return parse_package_json(file_path)
     if name == "package-lock.json":
